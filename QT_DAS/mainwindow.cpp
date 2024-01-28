@@ -9,6 +9,8 @@
 #include <data_config.h>
 //#include <mythread.h>
 //#include <dynamicdraw.h>
+//软件版本
+#define SOFTWARE_VERSION 1.1
 //调试开关
 //#define DEBUG 1
 //使用线程
@@ -38,7 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setWindowTitle(tr("PCIE CONTROLER"));
+    this->setWindowTitle(tr("PCIE CONTROLER(V%1)").arg(QString::number(SOFTWARE_VERSION)));
 
     //初始化时获取硬件版本号
     get_api_version(read_data.version_id,sizeof(read_data.version_id));
