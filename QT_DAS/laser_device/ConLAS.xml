@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312" standalone="yes"?>
+<Values>
+	<ComPort>3</ComPort>
+	<Delay>300</Delay>
+	<BaudRate>9600</BaudRate>
+	<Chinese>1</Chinese>
+	<PowerStep>100</PowerStep>
+	<OutputSPdBm>0</OutputSPdBm>
+	<Debug>0</Debug>
+	<DAStep>1</DAStep>
+	<Network>
+		<Enable>False</Enable>
+		<RemoteIP>127.0.0.1</RemoteIP>
+		<RemotePort>10000</RemotePort>
+		<LocalPort>10001</LocalPort>
+		<Mode>TCP</Mode>
+	</Network>
+</Values>

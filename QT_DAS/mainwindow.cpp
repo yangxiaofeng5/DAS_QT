@@ -9,12 +9,12 @@
 #include <data_config.h>
 //#include <mythread.h>
 //#include <dynamicdraw.h>
-//软件版本
-#define SOFTWARE_VERSION 1.1
 //调试开关
-//#define DEBUG 1
+#define DEBUG 1
 //使用线程
 //#define USE_THREAD 1
+//软件版本
+#define SOFTWARE_VERSION 1.1
 //采集通道个数
 #define CHANNLE_NUM 4
 //定时器
@@ -148,7 +148,7 @@ void MainWindow::RealtimeDataShow(QCustomPlot *customPlot)
 void MainWindow::realtimeDataSlot()
 {
 #ifdef DEBUG
-        qDebug("开始采集标志:%d",collecting_flag_ok);
+        //qDebug("开始采集标志:%d",collecting_flag_ok);
 #endif
 
     if(collecting_flag_ok == 1)
@@ -514,7 +514,7 @@ void MainWindow::on_soft_triger_Button_clicked(bool checked)
             ui->customPlot->graph(1)->data().data()->clear();
             //分离数据 画图
             int mun = 0;
-            for(int i=0;i<read_data.single_start_sample_return;i+=4)
+            for(int i=0;i<QString(ui->triger_length_text->text()).toInt()*CHANNLE_NUM;i+=4)
             {
                     //receive_ch1_buffer[i%2]=receive_data_buffer[i];
                     ui->customPlot->graph(1)->addData(mun,receive_data_buffer[i+1]);
@@ -648,5 +648,13 @@ void MainWindow::on_ch2_checkBox_toggled(bool checked)
 void MainWindow::on_message_clean_Button_clicked()
 {
     ui->message_plainTextEdit->clear();
+}
+
+
+void MainWindow::on_laser_set_device_Button_clicked()
+{
+    QDesktopServices::openUrl(QUrl("file:///C:/Program Files (x86)/CONNET LASER TECHNOLOGY/2.0.89/ConLAS.exe"));
+    //QProcess::execute("ConLAS.exe");
+    //激光器设置初始化
 }
 

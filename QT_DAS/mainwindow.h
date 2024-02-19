@@ -52,6 +52,8 @@ private slots:
 
     void on_message_clean_Button_clicked();
 
+    void on_laser_set_device_Button_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer *dataTimer;
