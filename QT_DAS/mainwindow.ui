@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1113</width>
-    <height>617</height>
+    <width>1449</width>
+    <height>813</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>358</x>
       <y>9</y>
-      <width>731</width>
-      <height>361</height>
+      <width>1081</width>
+      <height>571</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -91,8 +91,8 @@
    <widget class="QFrame" name="message_frame">
     <property name="geometry">
      <rect>
-      <x>358</x>
-      <y>384</y>
+      <x>710</x>
+      <y>590</y>
       <width>733</width>
       <height>171</height>
      </rect>
@@ -518,7 +518,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
+      <y>0</y>
       <width>301</width>
       <height>51</height>
      </rect>
@@ -536,17 +536,48 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="Line" name="line">
+   <widget class="QPushButton" name="laser_set_device_Button">
     <property name="geometry">
      <rect>
-      <x>325</x>
-      <y>20</y>
-      <width>31</width>
-      <height>531</height>
+      <x>130</x>
+      <y>60</y>
+      <width>80</width>
+      <height>23</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+    <property name="text">
+     <string>激光器设置</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="laser_set_device_Button_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>60</y>
+      <width>80</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>EDFA设置</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
@@ -555,7 +586,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1113</width>
+     <width>1449</width>
      <height>20</height>
     </rect>
    </property>

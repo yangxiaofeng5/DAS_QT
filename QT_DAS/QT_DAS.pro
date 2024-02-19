@@ -47,5 +47,7 @@ SOURCES$$PWD/qcustomplot/qcustomplot.cpp
 LIBS += -L$$PWD/pcie_api -lald8xxapi
 #LIBS += -L$$PWD/pcie_api -lald8xxapi_function
 
-RC_ICONS = logo.ico
+RC_ICONS = favicon.ico
 
+#DISTFILES += \
+#    更新记录.md

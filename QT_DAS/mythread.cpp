@@ -3,6 +3,7 @@
 #include <data_config.h>
 #include <QDebug>
 #include <QElapsedTimer>
+#include "ui_mainwindow.h"
 
 struct user_data_list user_data;
 
@@ -26,6 +27,7 @@ void api_recv_callback(const char* buffer, int length,const void *pContent)//数
 }
 void GetSampleData::run()
 {
+    ui->
     qDebug() << "当前线程对象的地址: " << QThread::currentThread();
     QElapsedTimer time; //计算程序运行时间
     QVector<int> list_ch1;
